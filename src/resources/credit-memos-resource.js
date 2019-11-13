@@ -18,8 +18,8 @@ export default function CreditMemosResource({apiHandler}) {
             return apiHandler.get(`credit-memos/${id}`, params);
         },
 
-        getAllTransactions({id}) {
-            return apiHandler.getAll(`credit-memos/${id}/transactions`);
+        create({data}) {
+            return apiHandler.post(`credit-memos`, data);
         },
 
         getAllTimelineMessages({id, limit = null, offset = null, sort = null, filter = null} = {}) {
